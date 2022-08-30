@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('customers', [\App\Http\Controllers\CustomerController::class, 'index']);
+Route::get('customers', [\App\Http\Controllers\CustomerApiController::class, 'index']);
