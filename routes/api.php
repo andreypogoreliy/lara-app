@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('customers', [\App\Http\Controllers\CustomerApiController::class, 'index']);
+Route::post('customers', [\App\Http\Controllers\CustomerController::class, 'index'])->middleware('test');
+Route::get('home', function (){
+    echo 'home';
+})->name('home');
