@@ -18,7 +18,10 @@ class CustomerSeeder extends Seeder
         $faker = Faker::create();
         for($i=0; $i < 10; $i++){
             DB::table('customers')->insert([
-                'name' => $faker->name,
+                'name' => $faker->firstName(),
+                'surname' => $faker->lastName(),
+                'email' => $faker->email(),
+                'password' => md5(123777),
             ]);
         }
     }

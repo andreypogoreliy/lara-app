@@ -13,9 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//})
 Route::get('/', function () {
     return view('welcome');
+})->middleware('authorization');
+
+Route::get('/login', function () {
+    return '*login*';
 });
+
+Route::get('/registration', [\App\Http\Controllers\RegistrationController::class, 'index']);
 //
 //Route::get('customers', [\App\Http\Controllers\CustomerController::class, 'index']);
 //
